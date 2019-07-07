@@ -1,36 +1,20 @@
 package hw7;
 
-import com.epam.jdi.light.driver.get.DriverData;
+import base.BaseTest;
+import hw7.entities.MetalsAndColorsData;
 import hw7.entities.Users;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static com.epam.jdi.light.driver.WebDriverUtils.killAllSeleniumDrivers;
-import static com.epam.jdi.light.ui.html.PageFactory.initElements;
-
-public class JdiSiteTest {
-
-    @BeforeClass
-    public void beforeClass() {
-        DriverData.CHROME_OPTIONS = () -> {
-            ChromeOptions cap = new ChromeOptions();
-            cap.addArguments("--start-maximized");
-            return cap;
-        };
-        initElements(JdiSite.class);
-    }
+public class JdiSiteTest extends BaseTest {
 
     @Test
-    public void loginTest() {
+    public void metalsAndColorsTest() {
         JdiSite.open();
+        JdiSite.homePage.shouldBeOpened();
         JdiSite.homePage.login(Users.PETER);
         JdiSite.homePage.checkLoggedIn(Users.PETER);
-    }
-
-    @AfterClass
-    public void afterClass() {
-        killAllSeleniumDrivers();
+        JdiSite.homePage.goToMetalsAndColorsPage();
+        JdiSite.metalsAndColorsPage.fillInData(MetalsAndColorsData.DATA);
+        JdiSite.metalsAndColorsPage.assertResultSectionContainsData(MetalsAndColorsData.DATA);
     }
 }
