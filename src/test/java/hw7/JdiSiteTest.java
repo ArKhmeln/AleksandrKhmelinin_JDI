@@ -14,7 +14,7 @@ public class JdiSiteTest extends BaseTest {
         JdiSite.homePage.login(Users.PETER);
         JdiSite.homePage.checkLoggedIn(Users.PETER);
         JdiSite.homePage.goToMetalsAndColorsPage();
-        JdiSite.metalsAndColorsPage.fillInData(MetalsAndColorsData.DATA);
+        JdiSite.metalsAndColorsPage.fillInFormAndSubmit(MetalsAndColorsData.DATA);
         JdiSite.metalsAndColorsPage.assertResultSectionContainsData(MetalsAndColorsData.DATA);
     }
 }

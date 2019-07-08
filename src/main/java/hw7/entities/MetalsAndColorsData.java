@@ -30,11 +30,11 @@ public enum MetalsAndColorsData {
     }
 
     public String getElementsString() {
-//      TODO Take a look on String::join method
-        return elements.toString().replace("[", "").replace("]", "");
+//      TODO Take a look on String::join method     -fixed
+        return String.join(", ", getElements());
     }
 
     public String getVegetablesString() {
-        return vegetables.toString().replace("[", "").replace("]", "");
+        return String.join(", ", getVegetables());
     }
 }

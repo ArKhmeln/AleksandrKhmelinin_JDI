@@ -20,8 +20,8 @@ public class MetalsAndColorsPage extends WebPage {
     @XPath("//ul[@class='panel-body-list results']")
     private static Text result;
 
-    // TODO You have a mismatch between method's name and what it does
-    public void fillInData(MetalsAndColorsData data) {
+    // TODO You have a mismatch between method's name and what it does  -fixed
+    public void fillInFormAndSubmit(MetalsAndColorsData data) {
         metalsAndColorsForm.fillInForm(data);
         submit.click();
     }
