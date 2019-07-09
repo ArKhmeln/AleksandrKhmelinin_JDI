@@ -1,12 +1,12 @@
-package hw7.pages;
+package hw.pages;
 
 import com.epam.jdi.light.elements.composite.WebPage;
 import com.epam.jdi.light.elements.pageobjects.annotations.simple.Css;
 import com.epam.jdi.light.elements.pageobjects.annotations.simple.XPath;
 import com.epam.jdi.light.ui.html.common.Button;
 import com.epam.jdi.light.ui.html.common.Label;
-import hw7.entities.Users;
-import hw7.forms.JdiLoginForm;
+import hw.entities.Users;
+import hw.forms.JdiLoginForm;
 import org.hamcrest.Matchers;
 
 public class JdiHomePage extends WebPage {

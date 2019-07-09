@@ -1,4 +1,4 @@
-package hw7.entities;
+package hw.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

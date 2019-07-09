@@ -1,10 +1,10 @@
-package hw7;
+package hw;
 
 import com.epam.jdi.light.elements.pageobjects.annotations.JSite;
 import com.epam.jdi.light.elements.pageobjects.annotations.Title;
 import com.epam.jdi.light.elements.pageobjects.annotations.Url;
-import hw7.pages.JdiHomePage;
-import hw7.pages.MetalsAndColorsPage;
+import hw.pages.JdiHomePage;
+import hw.pages.MetalsAndColorsPage;
 
 @JSite("https://epam.github.io/JDI/")
 public class JdiSite {

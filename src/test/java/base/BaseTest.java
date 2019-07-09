@@ -1,8 +1,8 @@
 package base;
 
 import com.epam.jdi.light.driver.get.DriverData;
-import hw7.JdiSite;
-import hw7.entities.Users;
+import hw.JdiSite;
+import hw.entities.Users;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

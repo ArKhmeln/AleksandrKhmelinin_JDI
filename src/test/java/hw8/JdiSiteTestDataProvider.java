@@ -6,8 +6,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
-import hw7.JdiSite;
-import hw7.entities.MetalsAndColorsData;
+import hw.JdiSite;
+import hw.entities.MetalsAndColorsData;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

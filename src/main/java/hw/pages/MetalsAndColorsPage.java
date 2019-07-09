@@ -1,13 +1,13 @@
-package hw7.pages;
+package hw.pages;
 
 import com.epam.jdi.light.elements.composite.WebPage;
 import com.epam.jdi.light.elements.pageobjects.annotations.simple.Css;
 import com.epam.jdi.light.elements.pageobjects.annotations.simple.XPath;
 import com.epam.jdi.light.ui.html.common.Button;
 import com.epam.jdi.light.ui.html.common.Text;
-import hw7.entities.MetalsAndColorsData;
-import hw7.enums.Result;
-import hw7.forms.MetalsAndColorsForm;
+import hw.enums.Result;
+import hw.entities.MetalsAndColorsData;
+import hw.forms.MetalsAndColorsForm;
 import org.hamcrest.Matchers;
 
 public class MetalsAndColorsPage extends WebPage {
