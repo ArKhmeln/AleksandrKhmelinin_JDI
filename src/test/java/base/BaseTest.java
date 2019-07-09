@@ -2,6 +2,7 @@ package base;
 
 import com.epam.jdi.light.driver.get.DriverData;
 import hw7.JdiSite;
+import hw7.entities.Users;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -11,6 +12,8 @@ import static com.epam.jdi.light.ui.html.PageFactory.initElements;
 
 public class BaseTest {
 
+    protected static final String dataSetPath = "src/test/resources/JDI_ex8_metalsColorsDataSet.json";
+
     @BeforeClass
     public void beforeClass() {
         DriverData.CHROME_OPTIONS = () -> {
@@ -19,6 +22,11 @@ public class BaseTest {
             return cap;
         };
         initElements(JdiSite.class);
+        JdiSite.open();
+        JdiSite.homePage.shouldBeOpened();
+        JdiSite.homePage.login(Users.PETER);
+        JdiSite.homePage.checkLoggedIn(Users.PETER);
+        JdiSite.homePage.goToMetalsAndColorsPage();
     }
 
     @AfterClass

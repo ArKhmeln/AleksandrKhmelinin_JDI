@@ -29,7 +29,7 @@ public class MetalsAndColorsPage extends WebPage {
     public void assertResultSectionContainsData(MetalsAndColorsData data) {
         result.shouldBe().text(Matchers.containsString(Result.SUMMARY.getText() + data.calculateSummary()));
         result.shouldBe().text(Matchers.containsString(Result.ELEMENTS.getText() + data.getElementsString()));
-        result.shouldBe().text(Matchers.containsString(Result.COLOR.getText() + data.getColors()));
+        result.shouldBe().text(Matchers.containsString(Result.COLOR.getText() + data.getColor()));
         result.shouldBe().text(Matchers.containsString(Result.METAL.getText() + data.getMetals()));
         result.shouldBe().text(Matchers.containsString(Result.VEGETABLES.getText() + data.getVegetablesString()));
     }

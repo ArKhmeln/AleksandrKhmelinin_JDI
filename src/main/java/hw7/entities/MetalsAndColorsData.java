@@ -2,19 +2,21 @@ package hw7.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
-import java.util.Arrays;
 import java.util.List;
 
+@Setter
 @Getter
 @AllArgsConstructor
-public enum MetalsAndColorsData {
+public class MetalsAndColorsData {
 
-    DATA(Arrays.asList(3, 8), Arrays.asList("Water", "Fire"), "Red", "Selen", Arrays.asList("Cucumber", "Tomato"));
+    //for hw7 test replace class with enum, uncomment next line and comment hw8 test
+    //DATA(Arrays.asList(3, 8), Arrays.asList("Water", "Fire"), "Red", "Selen", Arrays.asList("Cucumber", "Tomato"));
 
     private final List<Integer> summary;
     private final List<String> elements;
-    private final String colors;
+    private final String color;
     private final String metals;
     private final List<String> vegetables;
 
